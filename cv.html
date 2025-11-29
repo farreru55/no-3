@@ -34,8 +34,8 @@
                     type="button" role="tab" aria-controls="farrel-cv" aria-selected="true">Farrel Endra</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="refa-tab" data-bs-toggle="tab" data-bs-target="#refa-cv"
-                    type="button" role="tab" aria-controls="refa-cv" aria-selected="false">Refa Azahra</button>
+                <button class="nav-link" id="refa-tab" data-bs-toggle="tab" data-bs-target="#refa-cv" type="button"
+                    role="tab" aria-controls="refa-cv" aria-selected="false">Refa Azahra</button>
             </li>
         </ul>
 
@@ -43,16 +43,38 @@
         <div class="tab-content" id="cvTabContent">
             <!-- Refa Azahra CV -->
             <div class="tab-pane fade" id="refa-cv" role="tabpanel" aria-labelledby="refa-tab">
-                <div class="row">
+                <div class="row fade-in-up">
                     <!-- Left Column -->
                     <div class="col-lg-4">
-                        <div class="card shadow border-0">
-                            <div class="card-body text-center">
+                        <div class="card shadow border-0 text-center p-3">
+                            <div class="card-body">
                                 <img src="./assets/refa.png" alt="Refa Azahra"
-                                    class="img-fluid rounded-bottom mb-3 border border-light" style="width: 150px;">
-                                <h1 class="text-gradient display-5 fw-bolder">Refa Azahra</h1>
-                                <p class="fw-light lead">24410100035</p>
-                                <p class="lead fw-light mb-1">Mahasiswa S1 Sistem Informasi Universitas Dinamika</p>
+                                    class="img-fluid rounded-circle mb-3 border border-3 border-light shadow-sm profile-img">
+                                <h1 class="text-gradient display-6 fw-bolder">Refa Azahra</h1>
+                                <p class="text-muted mb-1">24410100035</p>
+                                <p class="lead fw-light mb-4">Mahasiswa S1 Sistem Informasi<br>Universitas Dinamika</p>
+
+                                <!-- Skills Section -->
+                                <div class="mb-4 text-start">
+                                    <h5 class="fw-bold text-primary mb-3"><i class="bi bi-tools me-2"></i>Keahlian</h5>
+                                    <div>
+                                        <span class="skill-badge">Organisasi</span>
+                                        <span class="skill-badge">Kepemimpinan</span>
+                                        <span class="skill-badge">Komunikasi</span>
+                                        <span class="skill-badge">Manajemen Waktu</span>
+                                        <span class="skill-badge">Event Planning</span>
+                                    </div>
+                                </div>
+
+                                <!-- Contact/Social -->
+                                <div class="d-flex justify-content-center gap-3">
+                                    <a href="#" class="btn btn-outline-primary btn-sm rounded-circle"><i
+                                            class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i
+                                            class="bi bi-github"></i></a>
+                                    <a href="#" class="btn btn-outline-danger btn-sm rounded-circle"><i
+                                            class="bi bi-envelope"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -62,19 +84,24 @@
                         <!-- Pengalaman Organisasi -->
                         <div class="card shadow border-0 mb-4">
                             <div class="card-body p-4">
-                                <h4 class="fw-bolder mb-3 text-gradient">Pengalaman Organisasi</h4>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Himpunan Mahasiswa S1 Sistem Informasi (HMSI) Universitas Dinamika</p>
-                                    <p class="text-muted mb-1">Divisi Medkominfo (Koordinator) (2024 - Sekarang)
-                                    </p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Komunitas Mighty Universitas Dinamika</p>
-                                    <p class="text-muted mb-1">Sekretaris (2024 - Sekarang)</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Komunitas Java Developer Group (JDG) Universitas Dinamika</p>
-                                    <p class="text-muted mb-1">Bendahara (2025 - Sekarang)</p>
+                                <h3 class="fw-bolder mb-4 text-gradient"><i
+                                        class="bi bi-people-fill me-2"></i>Pengalaman Organisasi</h3>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2024 - Sekarang</div>
+                                        <h5 class="fw-bold">Himpunan Mahasiswa S1 Sistem Informasi (HMSI)</h5>
+                                        <p class="text-muted mb-0">Koordinator Divisi Medkominfo</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2024 - Sekarang</div>
+                                        <h5 class="fw-bold">Komunitas Mighty</h5>
+                                        <p class="text-muted mb-0">Sekretaris</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025 - Sekarang</div>
+                                        <h5 class="fw-bold">Komunitas Java Developer Group (JDG)</h5>
+                                        <p class="text-muted mb-0">Bendahara</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -82,46 +109,49 @@
                         <!-- Pengalaman Kepanitiaan -->
                         <div class="card shadow border-0 mb-4">
                             <div class="card-body p-4">
-                                <h4 class="fw-bolder mb-3 text-gradient">Pengalaman Kepanitiaan</h4>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Orientasi Kehidupan Kampus (OKK) 2025</p>
-                                    <p class="text-muted mb-1">Divisi Co-Fasilitator
-                                    </p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Sign In (Osjur S1 SI) 2025</p>
-                                    <p class="text-muted mb-1">Divisi PDD (Koordinator) 
-                                    </p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Sie PDD Seminar TA dan Inagurasi Sign In 2024</p>
-                                    <p class="text-muted mb-1">Divisi PDD (Koordinator) 
-                                    </p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Sie PDD Seminar Tugas Akhir Februari 2025</p>
-                                    <p class="text-muted mb-1">Divisi PDD 
-                                    </p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Sie PDD Seminar Tugas Akhir Agustus 2025</p>
-                                    <p class="text-muted mb-1">Divisi PDD 
-                                    </p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Kuliah Tamu UI/UX 2025</p>
-                                    <p class="text-muted mb-1">Divisi PDD 
-                                    </p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Webinar Nasional Series Vol. 1 2025</p>
-                                    <p class="text-muted mb-1">Divisi PDD 
-                                    </p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Kakak Asuh Gerdu Sosial x HMSI 2025</p>
-                                    <p class="text-muted mb-1">Divisi Mentor 
-                                    </p>
+                                <h3 class="fw-bolder mb-4 text-gradient"><i
+                                        class="bi bi-calendar-event me-2"></i>Pengalaman Kepanitiaan</h3>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <h5 class="fw-bold">Orientasi Kehidupan Kampus (OKK)</h5>
+                                        <p class="text-muted mb-0">Divisi Co-Fasilitator</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <h5 class="fw-bold">Sign In (Osjur S1 SI)</h5>
+                                        <p class="text-muted mb-0">Koordinator Divisi PDD</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2024</div>
+                                        <h5 class="fw-bold">Seminar TA dan Inagurasi Sign In</h5>
+                                        <p class="text-muted mb-0">Koordinator Divisi PDD</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">Feb 2025</div>
+                                        <h5 class="fw-bold">Seminar Tugas Akhir</h5>
+                                        <p class="text-muted mb-0">Divisi PDD</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">Aug 2025</div>
+                                        <h5 class="fw-bold">Seminar Tugas Akhir</h5>
+                                        <p class="text-muted mb-0">Divisi PDD</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <h5 class="fw-bold">Kuliah Tamu UI/UX</h5>
+                                        <p class="text-muted mb-0">Divisi PDD</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <h5 class="fw-bold">Webinar Nasional Series Vol. 1</h5>
+                                        <p class="text-muted mb-0">Divisi PDD</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <h5 class="fw-bold">Kakak Asuh Gerdu Sosial x HMSI</h5>
+                                        <p class="text-muted mb-0">Divisi Mentor</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -131,16 +161,38 @@
 
             <!-- Farrel Endra CV -->
             <div class="tab-pane show active" id="farrel-cv" role="tabpanel" aria-labelledby="farrel-tab">
-                <div class="row">
+                <div class="row fade-in-up">
                     <!-- Left Column -->
                     <div class="col-lg-4">
-                        <div class="card shadow border-0">
-                            <div class="card-body text-center">
+                        <div class="card shadow border-0 text-center p-3">
+                            <div class="card-body">
                                 <img src="./assets/farrel.png" alt="Farrel Endra"
-                                    class="img-fluid rounded-bottom mb-3 border border-light" style="width: 150px;">
-                                <h1 class="text-gradient display-5 fw-bolder">Farrel Endra</h1>
-                                <p class="fw-light lead">24410100016</p>
-                                <p class="lead fw-light mb-4">Mahasiswa S1 Sistem Informasi Universitas Dinamika</p>
+                                    class="img-fluid rounded-circle mb-3 border border-3 border-light shadow-sm profile-img">
+                                <h1 class="text-gradient display-6 fw-bolder">Farrel Endra</h1>
+                                <p class="text-muted mb-1">24410100016</p>
+                                <p class="lead fw-light mb-4">Mahasiswa S1 Sistem Informasi<br>Universitas Dinamika</p>
+
+                                <!-- Skills Section -->
+                                <div class="mb-4 text-start">
+                                    <h5 class="fw-bold text-primary mb-3"><i class="bi bi-tools me-2"></i>Keahlian</h5>
+                                    <div>
+                                        <span class="skill-badge">Java</span>
+                                        <span class="skill-badge">Web Development</span>
+                                        <span class="skill-badge">Organisasi</span>
+                                        <span class="skill-badge">Public Speaking</span>
+                                        <span class="skill-badge">Event Management</span>
+                                    </div>
+                                </div>
+
+                                <!-- Contact/Social -->
+                                <div class="d-flex justify-content-center gap-3">
+                                    <a href="#" class="btn btn-outline-primary btn-sm rounded-circle"><i
+                                            class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="btn btn-outline-dark btn-sm rounded-circle"><i
+                                            class="bi bi-github"></i></a>
+                                    <a href="#" class="btn btn-outline-danger btn-sm rounded-circle"><i
+                                            class="bi bi-envelope"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -150,22 +202,29 @@
                         <!-- Pengalaman Organisasi -->
                         <div class="card shadow border-0 mb-4">
                             <div class="card-body p-4">
-                                <h4 class="fw-bolder mb-3 text-gradient">Pengalaman Organisasi</h4>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">HIMA S1 Sistem Informasi (HMSI) Universitas Dinamika</p>
-                                    <p class="text-muted mb-1">Divisi Ristekip (2024 - Sekarang)</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Gerakan Peduli Sosial Universitas Dinamika</p>
-                                    <p class="text-muted mb-1">Divisi Ristekip (2024 - Sekarang)</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Komunitas Java Developer Group (JDG) Universitas Dinamika</p>
-                                    <p class="text-muted mb-1">Sekretaris (2025 - Sekarang)</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Komunitas Mighty Universitas Dinamika</p>
-                                    <p class="text-muted mb-1">Divisi Advisory (2025 - Sekarang)</p>
+                                <h3 class="fw-bolder mb-4 text-gradient"><i
+                                        class="bi bi-people-fill me-2"></i>Pengalaman Organisasi</h3>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2024 - Sekarang</div>
+                                        <h5 class="fw-bold">HIMA S1 Sistem Informasi (HMSI)</h5>
+                                        <p class="text-muted mb-0">Divisi Ristekip</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2024 - Sekarang</div>
+                                        <h5 class="fw-bold">Gerakan Peduli Sosial</h5>
+                                        <p class="text-muted mb-0">Divisi Ristekip</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025 - Sekarang</div>
+                                        <h5 class="fw-bold">Komunitas Java Developer Group (JDG)</h5>
+                                        <p class="text-muted mb-0">Sekretaris</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025 - Sekarang</div>
+                                        <h5 class="fw-bold">Komunitas Mighty</h5>
+                                        <p class="text-muted mb-0">Divisi Advisory</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -173,50 +232,64 @@
                         <!-- Pengalaman Kepanitiaan -->
                         <div class="card shadow border-0 mb-4">
                             <div class="card-body p-4">
-                                <h4 class="fw-bolder mb-3 text-gradient">Pengalaman Kepanitiaan</h4>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Sign In (Osjur S1 SI) 2025</p>
-                                    <p class="text-muted mb-1">Divisi Mentor (Koordinator)</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Diklat PAKAR Gerdu Sosial 2025</p>
-                                    <p class="text-muted mb-1">Divisi Humas (Koordinator)</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Gerdu Mengajar (Workshop) 2025</p>
-                                    <p class="text-muted mb-1">Ketua Pelaksana</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Kakak Asuh Gerdu Sosial x HMSI 2025</p>
-                                    <p class="text-muted mb-1">Pemateri Utama</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Seminar TA & Inagurasi Sign In 2024</p>
-                                    <p class="text-muted mb-1">Divisi Humas</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Pembekalan Pengurus HMSI 2025</p>
-                                    <p class="text-muted mb-1">Divisi Perlengkapan</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Seminar Tugas Akhir Februari 2025</p>
-                                    <p class="text-muted mb-1">Divisi Perlengkapan</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Webinar Nasional Series Vol. 1 2025</p>
-                                    <p class="text-muted mb-1">Divisi IT dan Teknologi</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Seminar Tugas Akhir Agustus 2025</p>
-                                    <p class="text-muted mb-1">Divisi Perlengkapan</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Kajian Berorganisasi Vol. 2 Gerdu Sosial 2025</p>
-                                    <p class="text-muted mb-1">Divisi Konsumsi</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="fw-bolder mb-0">Mental Health DPM x Satgas PPKPT 2025</p>
-                                    <p class="text-muted mb-1">Divisi Humas</p>
+                                <h3 class="fw-bolder mb-4 text-gradient"><i
+                                        class="bi bi-calendar-event me-2"></i>Pengalaman Kepanitiaan</h3>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <h5 class="fw-bold">Sign In (Osjur S1 SI)</h5>
+                                        <p class="text-muted mb-0">Koordinator Divisi Mentor</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <h5 class="fw-bold">Diklat PAKAR Gerdu Sosial</h5>
+                                        <p class="text-muted mb-0">Koordinator Divisi Humas</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <h5 class="fw-bold">Gerdu Mengajar (Workshop)</h5>
+                                        <p class="text-muted mb-0">Ketua Pelaksana</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <h5 class="fw-bold">Kakak Asuh Gerdu Sosial x HMSI</h5>
+                                        <p class="text-muted mb-0">Pemateri Utama</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2024</div>
+                                        <h5 class="fw-bold">Seminar TA & Inagurasi Sign In</h5>
+                                        <p class="text-muted mb-0">Divisi Humas</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <h5 class="fw-bold">Pembekalan Pengurus HMSI</h5>
+                                        <p class="text-muted mb-0">Divisi Perlengkapan</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">Feb 2025</div>
+                                        <h5 class="fw-bold">Seminar Tugas Akhir</h5>
+                                        <p class="text-muted mb-0">Divisi Perlengkapan</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <h5 class="fw-bold">Webinar Nasional Series Vol. 1</h5>
+                                        <p class="text-muted mb-0">Divisi IT dan Teknologi</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">Aug 2025</div>
+                                        <h5 class="fw-bold">Seminar Tugas Akhir</h5>
+                                        <p class="text-muted mb-0">Divisi Perlengkapan</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <h5 class="fw-bold">Kajian Berorganisasi Vol. 2 Gerdu Sosial</h5>
+                                        <p class="text-muted mb-0">Divisi Konsumsi</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <h5 class="fw-bold">Mental Health DPM x Satgas PPKPT</h5>
+                                        <p class="text-muted mb-0">Divisi Humas</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
