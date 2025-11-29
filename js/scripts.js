@@ -19,4 +19,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', checkVisibility);
     checkVisibility(); // Initial check
+
+    // Add glowing effect to active accordion items
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    accordionItems.forEach(item => {
+        item.addEventListener('show.bs.collapse', function () {
+            this.classList.add('accordion-glowing');
+        });
+        item.addEventListener('hide.bs.collapse', function () {
+            this.classList.remove('accordion-glowing');
+        });
+    });
 });
+

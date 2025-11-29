@@ -13740,15 +13740,63 @@ html {
   transform: translateY(0);
 }
 
-/* Project Card Hover Effect */
 .card {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  position: relative;
-  z-index: 1;
+  border-radius: 10px;
 }
 
-.card:hover {
-  transform: scale(1.03);
-  /* Slightly enlarge the card on hover */
-  /* box-shadow: 0 0 15px rgba(226, 30, 128, 0.7); */
-} 
+/* Adjust Accordion Title Styling */
+#prokerAccordion .accordion-button h2 {
+    font-size: 1.5rem !important; /* Smaller title size */
+    color: black !important; /* Force title color to black */
+    -webkit-text-fill-color: initial !important; /* Override text-gradient */
+    background-image: none !important; /* Remove gradient background */
+}
+
+/* Ensure expanded accordion title remains black */
+#prokerAccordion .accordion-button:not(.collapsed) h2 {
+    color: black !important;
+    -webkit-text-fill-color: initial !important;
+    background-image: none !important;
+}
+
+.glowing-btn-hover {
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease-out; /* Smooth transition for all changes */
+    box-shadow: none; /* Initial state with no shadow */
+    background-color: var(--bs-dark); /* Set a dark background */
+    color: var(--bs-white); /* Set white text color for contrast */
+    text-decoration: none; /* Remove underline from links styled as buttons */
+}
+
+/* Breathing Animation for Glowing Buttons */
+@keyframes breathe-left-to-right {
+  0% {
+    box-shadow: 0 0 5px var(--bs-primary), 0 0 10px var(--bs-secondary), 0 0 20px var(--bs-purple, #6f42c1);
+  }
+  50% {
+    box-shadow: -5px 0 15px var(--bs-primary), 5px 0 25px var(--bs-secondary), 0 0 30px var(--bs-purple, #6f42c1);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--bs-primary), 0 0 10px var(--bs-secondary), 0 0 20px var(--bs-purple, #6f42c1);
+  }
+}
+
+.glowing-continuously {
+    transform: translateY(-2px) scale(1.03); /* Add scale effect */
+    animation: breathe-left-to-right 1s ease-in-out infinite;
+}
+
+.scale-up-hover {
+  transition: all 0.5s; 
+}
+
+.scale-up-hover:hover {
+  transform: scale(1.05);
+}
+
+.accordion-item.accordion-glowing {
+    box-shadow: 0 0 10px var(--bs-primary), 0 0 20px var(--bs-secondary), 0 0 30px var(--bs-purple, #6f42c1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
