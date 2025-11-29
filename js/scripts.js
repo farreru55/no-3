@@ -1,7 +1,22 @@
-/*!
-* Start Bootstrap - Personal v1.0.1 (https://startbootstrap.com/template-overviews/personal)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-personal/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('header, section');
+
+    sections.forEach(section => {
+        section.classList.add('fade-in-section');
+    });
+
+    function checkVisibility() {
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= window.innerHeight - 100 && rect.bottom >= 100) {
+                section.classList.add('is-visible');
+            } else {
+                section.classList.remove('is-visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Initial check
+});
