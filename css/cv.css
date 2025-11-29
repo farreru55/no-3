@@ -1,0 +1,26 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    margin-bottom: 1.5rem;
+}
+
+/* Custom styles for nav tabs in CV */
+.nav-pills .nav-link {
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    border: 1px solid transparent; /* Default transparent border */
+}
+
+.nav-pills .nav-link:not(.active) {
+    border-color: #dee2e6; /* Light gray border for inactive tabs */
+    color: #6c757d; /* Darker text for inactive tabs */
+    background-color: #e9ecef; /* Light background for inactive tabs */
+}
+
+.nav-pills .nav-link.active {
+    background-image: linear-gradient(315deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
+    background-color: transparent !important; /* Ensure the gradient is visible */
+    color: white !important; /* Set text color to white for better contrast */
+    border-color: transparent !important; /* Remove border if gradient is background */
+}
