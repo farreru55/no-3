@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 /*!
 * Start Bootstrap - Personal v1.0.1 (https://startbootstrap.com/template-overviews/personal)
@@ -644,7 +644,7 @@ progress {
 }
 
 .blockquote-footer::before {
-  content: "— ";
+  content: "â€”Â ";
 }
 
 .img-fluid {
@@ -13688,6 +13688,200 @@ html {
     left: 0.75vw;
   }
 
+  .profile .dots-4 {}
+
+  .d-print-flex {
+    display: flex !important;
+  }
+
+  .d-print-inline-flex {
+    display: inline-flex !important;
+  }
+
+  .d-print-none {
+    display: none !important;
+  }
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.bg-gradient-primary-to-secondary {
+  background: #1e30f3;
+  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rounded-4 {
+  border-radius: 1rem !important;
+}
+
+.feature {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.5rem;
+}
+
+.profile {
+  position: relative;
+  height: 75vw;
+  width: 75vw;
+  border-radius: 5vw;
+  margin-top: 5vw;
+  max-height: 40rem;
+  max-width: 40rem;
+}
+
+.profile .profile-img {
+  height: 80vw;
+  max-height: 45rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.profile .dots-1 {
+  position: absolute;
+  width: 3vw;
+  right: 1.5vw;
+  top: 4vw;
+}
+
+.profile .dots-1 svg {
+  fill: #fff;
+}
+
+.profile .dots-2 {
+  position: absolute;
+  width: 3vw;
+  right: -4vw;
+  top: 6.05vw;
+}
+
+.profile .dots-2 svg {
+  fill: #1e30f3;
+}
+
+.profile .dots-3 {
+  position: absolute;
+  width: 3vw;
+  left: 1.5vw;
+  bottom: 6.05vw;
+}
+
+.profile .dots-3 svg {
+  fill: #fff;
+}
+
+.profile .dots-4 {
+  position: absolute;
+  width: 3vw;
+  left: -4vw;
+  bottom: 4vw;
+}
+
+.profile .dots-4 svg {
+  fill: #1e30f3;
+}
+
+@media (min-width: 576px) {
+  .profile {
+    height: 60vw;
+    width: 60vw;
+  }
+
+  .profile .profile-img {
+    height: 65vw;
+  }
+
+  .profile .dots-1 {
+    width: 3vw;
+    right: 1.5vw;
+  }
+
+  .profile .dots-2 {
+    width: 3vw;
+    right: -4vw;
+  }
+
+  .profile .dots-3 {
+    width: 3vw;
+    left: 1.5vw;
+  }
+
+  .profile .dots-4 {
+    width: 3vw;
+    left: -4vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .profile {
+    height: 50vw;
+    width: 50vw;
+  }
+
+  .profile .profile-img {
+    height: 55vw;
+  }
+
+  .profile .dots-1 {
+    width: 3vw;
+    right: 1.5vw;
+  }
+
+  .profile .dots-2 {
+    width: 3vw;
+    right: -4vw;
+  }
+
+  .profile .dots-3 {
+    width: 3vw;
+    left: 1.5vw;
+  }
+
+  .profile .dots-4 {
+    width: 3vw;
+    left: -4vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .profile {
+    height: 40vw;
+    width: 40vw;
+  }
+
+  .profile .profile-img {
+    height: 45vw;
+  }
+
+  .profile .dots-1 {
+    width: 1.5vw;
+    right: 0.75vw;
+  }
+
+  .profile .dots-2 {
+    width: 1.5vw;
+    right: -2vw;
+  }
+
+  .profile .dots-3 {
+    width: 1.5vw;
+    left: 0.75vw;
+  }
+
   .profile .dots-4 {
     width: 1.5vw;
     left: -2vw;
@@ -13745,28 +13939,39 @@ html {
 }
 
 /* Adjust Accordion Title Styling */
-#prokerAccordion .accordion-button h2 {
-    font-size: 1.5rem !important; /* Smaller title size */
-    color: black !important; /* Force title color to black */
-    -webkit-text-fill-color: initial !important; /* Override text-gradient */
-    background-image: none !important; /* Remove gradient background */
+#prokerAccordion .accordion-button h2,
+#faqAccordion .accordion-button h2 {
+  font-size: 1.5rem !important;
+  /* Smaller title size */
+  color: black !important;
+  /* Force title color to black */
+  -webkit-text-fill-color: initial !important;
+  /* Override text-gradient */
+  background-image: none !important;
+  /* Remove gradient background */
 }
 
 /* Ensure expanded accordion title remains black */
-#prokerAccordion .accordion-button:not(.collapsed) h2 {
-    color: black !important;
-    -webkit-text-fill-color: initial !important;
-    background-image: none !important;
+#prokerAccordion .accordion-button:not(.collapsed) h2,
+#faqAccordion .accordion-button:not(.collapsed) h2 {
+  color: black !important;
+  -webkit-text-fill-color: initial !important;
+  background-image: none !important;
 }
 
 .glowing-btn-hover {
-    position: relative;
-    z-index: 1;
-    transition: all 0.5s ease-out; /* Smooth transition for all changes */
-    box-shadow: none; /* Initial state with no shadow */
-    background-color: var(--bs-dark); /* Set a dark background */
-    color: var(--bs-white); /* Set white text color for contrast */
-    text-decoration: none; /* Remove underline from links styled as buttons */
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s ease-out;
+  /* Smooth transition for all changes */
+  box-shadow: none;
+  /* Initial state with no shadow */
+  background-color: var(--bs-dark);
+  /* Set a dark background */
+  color: var(--bs-white);
+  /* Set white text color for contrast */
+  text-decoration: none;
+  /* Remove underline from links styled as buttons */
 }
 
 /* Breathing Animation for Glowing Buttons */
@@ -13774,21 +13979,24 @@ html {
   0% {
     box-shadow: 0 0 5px var(--bs-primary), 0 0 10px var(--bs-secondary), 0 0 20px var(--bs-purple, #6f42c1);
   }
+
   50% {
     box-shadow: -5px 0 15px var(--bs-primary), 5px 0 25px var(--bs-secondary), 0 0 30px var(--bs-purple, #6f42c1);
   }
+
   100% {
     box-shadow: 0 0 5px var(--bs-primary), 0 0 10px var(--bs-secondary), 0 0 20px var(--bs-purple, #6f42c1);
   }
 }
 
 .glowing-continuously {
-    transform: translateY(-2px) scale(1.03); /* Add scale effect */
-    animation: breathe-left-to-right 1s ease-in-out infinite;
+  transform: translateY(-2px) scale(1.03);
+  /* Add scale effect */
+  animation: breathe-left-to-right 1s ease-in-out infinite;
 }
 
 .scale-up-hover {
-  transition: all 0.5s; 
+  transition: all 0.5s;
 }
 
 .scale-up-hover:hover {
@@ -13796,7 +14004,66 @@ html {
 }
 
 .accordion-item.accordion-glowing {
-    box-shadow: 0 0 10px var(--bs-primary), 0 0 20px var(--bs-secondary), 0 0 30px var(--bs-purple, #6f42c1);
-    transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 10px var(--bs-primary), 0 0 20px var(--bs-secondary), 0 0 30px var(--bs-purple, #6f42c1);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
+/* Make accordion glow more subtle */
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.1) !important;
+  border-color: rgba(var(--bs-primary-rgb), 0.1) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+  background-color: rgba(var(--bs-primary-rgb), 0.05);
+  color: var(--bs-primary);
+}
+
+/* Scroll Reveal Section */
+#scroll-reveal {
+  --scroll-progress: 0;
+}
+
+.scroll-reveal-container {
+  padding: 2rem 0;
+}
+
+.scroll-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--bs-primary), var(--bs-secondary), transparent);
+  width: calc(var(--scroll-progress) * 100%);
+  max-width: 600px;
+  opacity: var(--scroll-progress);
+  transition: width 0.1s linear, opacity 0.1s linear;
+}
+
+.scroll-text {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 768px) {
+  .scroll-text {
+    font-size: 4.5rem;
+  }
+}
+
+.text-overlay {
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 calc(100% - (var(--scroll-progress) * 100%)) 0 0);
+  transition: clip-path 0.1s linear;
+  /* Ensure the gradient text is visible */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 991.98px) {
+  .profile-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+}
