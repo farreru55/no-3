@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 
 /*!
 * Start Bootstrap - Personal v1.0.1 (https://startbootstrap.com/template-overviews/personal)
@@ -14160,4 +14160,13 @@ html {
   .gantt-label {
     font-size: 0.9rem;
   }
+}
+
+/* Navbar link spacing */
+.navbar-nav .nav-item {
+  margin-left: 1rem;
+}
+
+.navbar-nav .nav-item:first-child {
+  margin-left: 0;
 }
