@@ -14067,3 +14067,97 @@ html {
     height: auto;
   }
 }
+
+/* Gantt Chart Styles */
+.gantt-chart-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+
+.gantt-chart {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1rem;
+  min-width: 800px;
+  /* Ensure it doesn't get too squished on mobile */
+}
+
+.gantt-header {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  text-align: center;
+  font-weight: bold;
+  color: var(--bs-gray-600);
+  border-bottom: 1px solid var(--bs-gray-300);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gantt-row {
+  display: contents;
+  /* Allows children to participate in the main grid */
+}
+
+.gantt-label {
+  grid-column: 1;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-right: 1px solid var(--bs-gray-200);
+  padding-right: 1rem;
+}
+
+.gantt-bars {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+/* Vertical grid lines */
+.gantt-bars::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gantt-bar {
+  height: 24px;
+  background: var(--bs-gradient);
+  background-color: var(--bs-primary);
+  /* Fallback */
+  background-image: linear-gradient(45deg, var(--bs-primary), var(--bs-secondary));
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gantt-bar:hover {
+  transform: scaleY(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .gantt-chart {
+    grid-template-columns: 150px 1fr;
+    min-width: 600px;
+  }
+
+  .gantt-label {
+    font-size: 0.9rem;
+  }
+}
