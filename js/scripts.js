@@ -30,5 +30,40 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.remove('accordion-glowing');
         });
     });
+
+    // Scroll Reveal Animation
+    const scrollRevealSection = document.getElementById('scroll-reveal');
+    if (scrollRevealSection) {
+        window.addEventListener('scroll', () => {
+            const rect = scrollRevealSection.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // Calculate progress
+            // 0 when the top of the section is at the bottom of the viewport
+            // 1 when the bottom of the section is at the bottom of the viewport (fully entered)
+            // Adjusting the range to control when the fill happens
+
+            // Let's make it fill as it centers in the screen
+            // Start filling when top is at 80% of viewport height
+            // Finish filling when top is at 40% of viewport height
+
+            const start = windowHeight * 0.8;
+            const end = windowHeight * 0.4;
+
+            let progress = (start - rect.top) / (start - end);
+            progress = Math.min(Math.max(progress, 0), 1);
+
+            scrollRevealSection.style.setProperty('--scroll-progress', progress);
+        });
+
+        // Initial check
+        const rect = scrollRevealSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const start = windowHeight * 0.8;
+        const end = windowHeight * 0.4;
+        let progress = (start - rect.top) / (start - end);
+        progress = Math.min(Math.max(progress, 0), 1);
+        scrollRevealSection.style.setProperty('--scroll-progress', progress);
+    }
 });
 
