@@ -4,114 +4,23 @@ body {
 
 .card {
     margin-bottom: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
 }
 
 /* Custom styles for nav tabs in CV */
 .nav-pills .nav-link {
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    border: 1px solid transparent; /* Default transparent border */
 }
 
 .nav-pills .nav-link:not(.active) {
-    border-color: #dee2e6;
-    color: #6c757d;
-    background-color: #e9ecef;
+    border-color: #dee2e6; /* Light gray border for inactive tabs */
+    color: #6c757d; /* Darker text for inactive tabs */
+    background-color: #e9ecef; /* Light background for inactive tabs */
 }
 
 .nav-pills .nav-link.active {
     background-image: linear-gradient(315deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
-    background-color: transparent !important;
-    border-left: 2px solid #e9ecef;
-    color: white;
-}
-
-/* Profile Image Sizing */
-.profile-img {
-    max-width: 200px;
-    width: 100%;
-    height: 200px;
-    margin: 0 auto 1rem auto;
-    display: block;
-    object-fit: cover;
-    object-position: top;
-}
-
-/* Timeline Styles */
-.timeline {
-    position: relative;
-    padding-left: 2rem;
-    border-left: 2px solid #e9ecef;
-    margin-left: 1rem;
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -2rem;
-    top: 0.25rem;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: var(--bs-primary);
-    border: 3px solid #fff;
-    box-shadow: 0 0 0 1px rgba(var(--bs-primary-rgb), 0.2);
-    transform: translateX(-50%);
-    margin-left: 1px;
-    /* Center on 2px border */
-    z-index: 1;
-}
-
-.timeline-date {
-    font-size: 0.85rem;
-    color: #6c757d;
-    margin-bottom: 0.25rem;
-    font-weight: 600;
-}
-
-/* Skills Badges */
-.skill-badge {
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin: 0.2em;
-    font-size: 0.9em;
-    font-weight: 600;
-    color: var(--bs-primary);
-    background-color: rgba(var(--bs-primary-rgb), 0.1);
-    border-radius: 50rem;
-    transition: all 0.2s ease;
-}
-
-.skill-badge:hover {
-    background-color: var(--bs-primary);
-    color: white;
-    transform: scale(1.05);
-}
-
-/* Animations */
-.fade-in-up {
-    animation: fadeInUp 0.5s ease-out forwards;
-    opacity: 0;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    background-color: transparent !important; /* Ensure the gradient is visible */
+    color: white !important; /* Set text color to white for better contrast */
+    border-color: transparent !important; /* Remove border if gradient is background */
 }
