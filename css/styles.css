@@ -14170,3 +14170,14 @@ html {
 .navbar-nav .nav-item:first-child {
   margin-left: 0;
 }
+
+
+.logo-img {
+  height: 100px;
+}
+
+@media (max-width: 991.98px) {
+  .logo-img {
+    height: 50px;
+  }
+}
