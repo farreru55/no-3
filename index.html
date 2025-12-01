@@ -858,7 +858,7 @@
         <section class="py-5 bg-light" id="timeline-proker">
             <div class="container px-5 mb-5">
                 <div class="text-center mb-5">
-                    <h2 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Timeline Program
+                    <h2 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Draf Timeline Program
                             Kerja</span></h2>
                 </div>
                 <div class="gantt-chart-wrapper">
@@ -1097,11 +1097,88 @@
         <div class="container px-5">
             <div class="text-center small m-0">Copyright &copy; FAREFA 2025</div>
         </div>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<!-- Orb Cursor Effect -->
+<div id="cursor-orb"></div>
+<style>
+    /* Hide default cursor */
+    body,
+    a,
+    button,
+    input,
+    textarea,
+    select,
+    .btn {
+        cursor: none !important;
+    }
+
+    #cursor-orb {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-color: #1e30f3;
+        /* Primary Blue */
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        /* White border for contrast */
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 2147483647;
+        /* Max Z-Index to ensure visibility */
+        transform: translate(-50%, -50%);
+        transition: width 0.2s, height 0.2s, background-color 0.2s;
+        box-shadow: 0 0 10px rgba(30, 48, 243, 0.5);
+        will-change: transform;
+    }
+
+    /* Hover effect for interactive elements */
+    body:has(a:hover) #cursor-orb,
+    body:has(button:hover) #cursor-orb,
+    body:has(input:hover) #cursor-orb,
+    body:has(textarea:hover) #cursor-orb,
+    body:has(select:hover) #cursor-orb,
+    body:has(.btn:hover) #cursor-orb {
+        width: 40px;
+        height: 40px;
+        background-color: rgba(30, 48, 243, 0.2);
+        border: 2px solid #1e30f3;
+    }
+</style>
+<script>
+    const orb = document.getElementById('cursor-orb');
+    let mouseX = 0;
+    let mouseY = 0;
+    let orbX = -100; // Start off-screen
+    let orbY = -100;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        // Initialize orb position on first move if needed
+        if (orbX === -100) {
+            orbX = mouseX;
+            orbY = mouseY;
+        }
+    });
+
+    function animateOrb() {
+        // Responsive lerp
+        orbX += (mouseX - orbX) * 0.5;
+        orbY += (mouseY - orbY) * 0.5;
+
+        // Use translate3d for better performance
+        orb.style.transform = `translate3d(${orbX}px, ${orbY}px, 0) translate(-50%, -50%)`;
+
+        requestAnimationFrame(animateOrb);
+    }
+    animateOrb();
+</script>
 </body>
 
 </html>
