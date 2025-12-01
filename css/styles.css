@@ -14004,7 +14004,7 @@ html {
 }
 
 .accordion-item.accordion-glowing {
-  box-shadow: 0 0 10px rgba(var(--bs-primary-rgb), 0.5), 0 0 20px rgba(var(--bs-secondary-rgb), 0.5), 0 0 30px rgba(var(--bs-purple-rgb), 0.5);
+  box-shadow: 0 0 10px rgba(var(--bs-primary-rgb), 0.2), 0 0 20px rgba(var(--bs-secondary-rgb), 0.2), 0 0 30px rgba(var(--bs-purple-rgb), 0.2);
   transition: box-shadow 0.3s ease-in-out;
 }
 
