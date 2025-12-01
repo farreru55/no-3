@@ -14108,6 +14108,11 @@ html {
   padding: 0.5rem 0;
   border-right: 1px solid var(--bs-gray-200);
   padding-right: 1rem;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: var(--bs-light);
 }
 
 .gantt-bars {
